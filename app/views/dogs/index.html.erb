@@ -1,0 +1,7 @@
+<h1> All Dogs </h1>
+    <% @dogs.each do | dog | %>
+    <li><a href="http://localhost:3000/dogs/<%=dog.id%>"> <%= dog.name %> </li>
+    <%  end   %>
+
+
+

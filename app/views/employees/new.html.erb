@@ -1,0 +1,22 @@
+<h1> Create New Employee </h1>
+
+<form method="POST" action="/employees">
+    <label> First Name </label>
+    <p><input type="text" name="first_name"></p>
+    <label> Last Name </label>
+    <p><input type="text" name="last_name"></p>
+    <label> Alias </label>
+    <p><input type="text" name="alias"></p>
+    <label> Title </label></p>
+    <p><input type="text" name="title"></p>
+    <label> Office Name </label>
+    <p><input type="text" name="office"></p>
+    <label> Selfie</label>
+    <p><input type="text" name="img_url"></p>
+    <select name="dog_id">
+        <%= Dog.all.each do | dog | %>
+        <option value="<%= dog.id %>" > <%=dog.name%> </option>   
+        <% end %>
+    </select>
+    <input type="submit">
+</form>
